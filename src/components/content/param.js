@@ -29,7 +29,7 @@ const ListItem = Radium(({
         val={val}
         defaultVal={defaultVal}
         utils={utils} />
-    : &nbsp;
+    &nbsp;
       <div
         style={descriptionStyle}
         dangerouslySetInnerHTML={{__html: utils.md(description, true)}} />
@@ -61,20 +61,20 @@ const Param = ({
 
   return (
     <div>
-      <ListItem
+      {name && <ListItem
         key='1'
         name={name}
         val={typeVal}
         defaultVal={defaultVal}
         description={description}
-        utils={utils} />
+        utils={utils} />}
       {propertyList}
     </div>
   )
 }
 
 Param.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   typeVal: PropTypes.any,
   defaultVal: PropTypes.string,
   description: PropTypes.object,

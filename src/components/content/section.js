@@ -11,6 +11,7 @@ const SourceLink = require('./source-link')
 const Extends = require('./extends')
 const See = require('./see')
 const Params = require('./params')
+const Param = require('./param')
 const Examples = require('./examples')
 const Returns = require('./returns')
 const Throws = require('./throws')
@@ -48,6 +49,7 @@ const Section = ({
         }} />
       <Extends list={section.augments} utils={utils} />
       <Params params={section.params} utils={utils} />
+      <Param properties={section.properties} utils={utils} />
       <Returns list={section.returns} utils={utils} />
       <Throws list={section.throws} utils={utils} />
       <Examples list={section.examples} utils={utils} />
